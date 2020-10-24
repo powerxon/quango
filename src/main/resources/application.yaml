@@ -1,0 +1,21 @@
+spring:
+  profiles: local
+  jpa:
+    database: POSTGRESQL
+    show-sql: true
+    hibernate:
+    ddl-auto: create-drop
+  datasource:
+    platform: postgres
+    url: jdbc:postgresql://dockerdb:5432/quangodb
+    username: postgres
+    password: password
+    driverClassName: org.postgresql.Driver
+  liquibase:
+    enabled: false
+  redis:
+    database: 0
+    host: localhost
+    port: 6379
+    timeout: 60000
+
